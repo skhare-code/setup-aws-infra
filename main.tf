@@ -22,3 +22,12 @@ resource "aws_instance" "app_server" {
     Name = "sk-TestServerInstance"
   }
 }
+
+resource "aws_instance" "app_server_new_1" {
+  ami           = "ami-08d70e59c07c61a3a"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "sk-7thApril-ec2-server"
+  }
+}
