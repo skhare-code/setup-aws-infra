@@ -31,3 +31,11 @@ resource "aws_instance" "app_server_new_1" {
     Name = "sk-7thApril-ec2-server"
   }
 }
+
+resource "aws_vpc" "<resource_name>" {
+  cidr_block = "<cidr>"
+
+  tags = {
+    Name = "main"
+  }
+}
