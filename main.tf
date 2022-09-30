@@ -21,6 +21,11 @@ resource "aws_instance" "app_server" {
   tags = {
     Name = "sk-TestServerInstance"
   }
+
+  metadata_options {
+    http_endpoint = "disabled"
+    http_tokens   = "required"
+  }
 }
 
 resource "aws_instance" "app_server_new_1" {
